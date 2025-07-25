@@ -1,5 +1,10 @@
 # Telegram Keyword Alert Bot
 
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Telethon](https://img.shields.io/badge/library-telethon-orange)](https://github.com/LonamiWebs/Telethon)
+[![GitHub stars](https://img.shields.io/github/stars/Konstannttiinn1/keyword-alert-bot.svg?style=social)](https://github.com/Konstannttiinn1/keyword-alert-bot/stargazers)
+
 > Telegram-бот, который отслеживает сообщения в выбранных группах и пересылает тебе только те, что содержат нужные ключевые слова.
 
 ---
@@ -42,6 +47,12 @@
    ```bash
    docker compose up --build -d
    ```
+
+✅ Бот запустится в фоне и начнёт слушать чаты. Логи можно посмотреть так:
+
+```bash
+docker compose logs -f
+```
 
 ---
 
