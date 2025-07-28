@@ -1,8 +1,8 @@
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 
-api_id = 27664386
-api_hash = '0071fe658db0a95a0ebff6239dfd7ab7'
+api_id = 
+api_hash = ''
 
 with TelegramClient(StringSession(), api_id, api_hash) as client:
     print("👉 Введите номер телефона и пройдите авторизацию...")
