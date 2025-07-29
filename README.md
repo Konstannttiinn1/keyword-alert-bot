@@ -90,6 +90,7 @@ docker compose logs -f
 - `admin_ids` - id админов (можно узнать у [@userinfobot](https://t.me/userinfobot))
 - `bot_token` - ''
 
+---
 
 🧪 Как получить session_string
 
@@ -108,6 +109,8 @@ with TelegramClient(StringSession(), api_id, api_hash) as client:
 Запусти его и пройди авторизацию по номеру телефона
 
 Скопируй строку сессии и вставь в config.json
+
+---
 
 📲 Telegram-команды
 
