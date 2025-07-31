@@ -49,7 +49,7 @@
   "chats": [],
   "bot_token": "your_bot_token",
   "usernames": {}
-}
+      }
 
    ```
 
