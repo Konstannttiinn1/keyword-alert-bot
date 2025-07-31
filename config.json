@@ -1,11 +1,17 @@
 {
-  "api_id":123,
+  "api_id": 123,
   "api_hash": "",
-  "session_name": "",
-  "user_id":123,
-  "keywords": [
-  ],
-  "admin_ids": [],
+  "session_name": "session",
   "session_string": "",
-  "chats": []
+  "admin_ids": [
+  ],
+  "bot_token": "",
+  "keywords": [
+
+  ],
+  "chats": [
+  ],
+  "usernames": {
+
+  }
 }
