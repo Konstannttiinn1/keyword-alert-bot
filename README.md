@@ -39,7 +39,8 @@
 3. Создай `config.json` вручную или запусти проект один раз, он создастся сам.
 4. Заполни `config.json`:
    ```json
-   {"api_id": 123456,
+   {
+   "api_id": 123456,
    "api_hash": "your_api_hash",
     "session_name": "session",
    "session_string": "",
