@@ -234,14 +234,20 @@ async def keyword_alert_handler(event):
     msg_text = event.message.message.lower()
     for keyword in config['keywords']:
         if keyword.lower() in msg_text:
-            sender = await event.get_sender()
+            try:
+                sender = await event.get_sender()
+            except:
+                sender = None
             chat_id = str(event.chat_id)
             username = config.get("usernames", {}).get(chat_id, "")
             link = f"https://t.me/c/{chat_id[4:]}/{event.message.id}" if chat_id.startswith('-100') else "(нет ссылки)"
             chat_label = f"{chat_id} (@{username})" if username else chat_id
+            sender_name = sender.first_name if sender and sender.first_name else 'Неизвестно'
+            sender_username = f"@{sender.username}" if sender and sender.username else 'не_указан'
+
             alert = (
                 f"🚨 <b>Обнаружено совпадение</b> в чате <b>{chat_label}</b>\n"
-                f"👤 <b>Автор:</b> {sender.first_name or 'Без имени'} (@{sender.username or 'без_юзернейма'})\n"
+                f"👤 <b>Автор:</b> {sender_name} ({sender_username})\n"
                 f"💬 <b>Сообщение:</b> {event.message.text[:400]}\n"
                 f"🔗 <a href=\"{link}\">Перейти к сообщению</a>"
             )
