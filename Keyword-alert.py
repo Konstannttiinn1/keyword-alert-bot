@@ -1,5 +1,5 @@
 # Keyword-alert.py — Полностью обновлённый и исправленный с учётом удаления чатов и команды /start
-
+import asyncio
 import json
 import os
 import re
@@ -255,8 +255,14 @@ async def keyword_alert_handler(event):
                 await bot_client.send_message(admin_id, alert, parse_mode='html')
             break
 
-print("🚀 Бот и мониторинг запущены. Ожидаю события...")
-user_client.start()
-bot_client.start()
-user_client.run_until_disconnected()
-bot_client.run_until_disconnected()
+async def main():
+    print("🚀 Бот и мониторинг запущены. Ожидаю события...", flush=True)
+    await user_client.start()
+    await bot_client.start()
+    await asyncio.gather(
+        user_client.run_until_disconnected(),
+        bot_client.run_until_disconnected()
+    )
+
+if __name__ == "__main__":
+    asyncio.run(main())
