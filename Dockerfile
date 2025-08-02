@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Запуск скрипта
-CMD ["python", "Keyword-alert.py"]
+CMD ["python", "-u", "Keyword-alert.py"]
